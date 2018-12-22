@@ -9,7 +9,7 @@ conn = psql.connect("dbname=news user=postgres password=postgres")
 # create a cursor
 curr = conn.cursor()
 
-# execute a query to create a combined table with articles, 
+# execute a query to create a combined table with articles,
 # total views and their authors
 curr.execute('''CREATE OR REPLACE VIEW "article_author_views" AS
                 SELECT
@@ -58,7 +58,7 @@ curr.execute('''SELECT
                 GROUP BY "name"
                 ORDER BY SUM("views") DESC;''')
 
-#print authors and their views
+# print authors and their views
 top_authors = curr.fetchall()
 for author in top_authors:
     print("{}\t - {} views".format(author[0], author[1]))
