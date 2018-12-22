@@ -1,4 +1,4 @@
-
+#!python3
 import psycopg2 as psql
 import datetime
 
