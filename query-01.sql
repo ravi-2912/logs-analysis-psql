@@ -1,6 +1,6 @@
 -- results table
+CREATE OR REPLACE VIEW "article_author_views" AS
 SELECT
-    "slug",
     "title",
     "views",
     "name"
